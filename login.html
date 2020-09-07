@@ -3,6 +3,10 @@
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="./css/signup_login.css">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
 </head>
 <body>
     <div id="header">
@@ -28,10 +32,10 @@
                 <img src="./img/user.svg" alt="error">
 			</div>
 			<div>
-				<input type="text" placeholder="Email" autofocus>
+				<input type="text" placeholder="Email" autofocus id="email" name="email">
 			</div>
 			<div>
-				<input type="text" placeholder="Password">
+				<input type="text" placeholder="Password" id="password"	name="password">
 			</div>
 			<div>
 				<button>Login</button>
@@ -43,6 +47,18 @@
         <div  class="title">
             <a href="#">Create an account</a>
         </div>
+        <script type="text/javascript">
+			$("#login-from-data").validate({
+				  rules: {
+				    email: {
+				      required: true,
+				    },
+				    password: {
+				      required: true,
+				    }
+				  }
+				});
+		</script>
     </div>
 </body>
 </html>

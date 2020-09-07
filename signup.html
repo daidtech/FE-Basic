@@ -3,6 +3,10 @@
 <head>
 	<title>Signup</title>
 	<link rel="stylesheet" href="./css/signup_login.css">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
 </head>
 <body>
 	<div id="header">
@@ -26,25 +30,46 @@
 		<form id="from-data" action="#">
 			<div>
 				<h4>First name</h4>
-				<input type="text" placeholder="First Name" autofocus>
+				<input type="text" placeholder="First Name" autofocus  id="firstname" name="firstname">
 			</div>
 			<div>
 				<h4>Last name</h4>
-				<input type="text" placeholder="Last name">
+				<input type="text" placeholder="Last name"  id="lastname" name="lastname">
 			</div>
 			<div>
 				<h4>New password</h4>
-				<input type="text" placeholder="password">
+				<input type="text" placeholder="password" id="password" name="password">
 			</div>
 			<div>
 				<h4>Password confirmation</h4>
-				<input type="text" placeholder="confirmation">
+				<input type="text" placeholder="confirmation"  id="confirmation" name="confirmation">
 			</div>
 			<div>
-				<button>Signup</button>
+				<button type="submit">Signup</button>
 			</div>
+			<script type="text/javascript">
+				$("#from-data").validate({
+					  rules: {
+					    firstname: {
+					      required: true,
+					      maxlength: 25
+					    },
+					    lastname: {
+					      required: true,
+					      maxlength: 25
+					    },					    
+					    password: {
+					      required: true,
+					      maxlength: 64
+					    }, 
+					    confirmation: {
+					      required: true,
+					      maxlength: 25
+					    },
+					  }
+					});
+			</script>
 		</form>
-	</div>
-
+	</div> 
 </body>
 </html>

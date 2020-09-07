@@ -3,6 +3,9 @@
     padding: 0;
     border:0;
 }
+label.error{
+    color: red; 
+}
 #header{
     background: #3C5A97;
     display: flex;

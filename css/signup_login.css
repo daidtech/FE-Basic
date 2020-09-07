@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+#header{
+    background: #3C5A97;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10%;
+}
+#header #start {
+    display: flex;
+}
+#header #start a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: auto 0;
+    margin-right: 12px;
+}
+#header #start input{
+    width: 420px;
+    padding: 8px;
+    border-radius: 3px;
+}
+#header #end{
+    display: flex;
+}
+#header #end a{
+    text-decoration:none;
+    background: #3C5A97;
+    color: #ffffff;
+    font-weight: bold;
+    margin: auto 0;
+}
+/* content */
+#content{
+    width: 28%;
+    margin: 70px auto;
+}
+#content #title h1{
+    color: #3C5A97;
+    text-align: center;
+}
+#content #social-media{
+    margin: 30px auto;
+    padding: 0 5%;
+    width: 60%;
+    border:2px solid #f8f8f8;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#content #social-media div > a > img{
+    width: 70px;
+}
+#content #from-data{
+    background-color: #f9f9f9;
+    padding: 30px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+#content #from-data > div > h4{
+    margin-top: 10px;
+}
+#content #from-data > div > input{
+    width: 90%;
+    border-radius: 5px;
+    border: 2px solid #f0f0f0;
+    margin-top: 3px;
+    padding: 10px;
+}
+#content #from-data > div{
+    justify-content: center;
+}
+#content #from-data > div > button{
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 10px;
+    background-color: #3C5A97;
+    width: 40%;
+    height: 40px;
+    margin: 15px auto;
+    margin-bottom: 0;
+    border-radius: 5px;
+}
+
+/* Login page */
+#login-content{
+    width: 28%;
+    margin: 70px auto;
+}
+#login-content #title h1{
+    color: #3C5A97;
+    text-align: center;
+}
+#login-content #social-media{
+    margin: 30px auto;
+    margin-bottom: 15px;
+    padding: 0 5%;
+    width: 60%;
+    border:2px solid #f8f8f8;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#login-content #social-media div > a > img{
+    width: 70px;
+}
+#login-content #login-from-data{
+    width: 60%;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+#login-content #login-from-data > div:first-child{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+#login-content #login-from-data > div > img{
+    display: block;
+    width: 80px;
+}
+#login-content #login-from-data > div:nth-child(2) > input{
+    width: 90%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid #f0f0f0;
+    padding: 10px;
+}
+#login-content #login-from-data > div:nth-child(3) > input{
+    width: 90%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 2px solid #f0f0f0;
+    border-top: 0;
+    padding: 10px;
+}
+#login-content #login-from-data > div > button{
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 10px;
+    background-color: #3C5A97;
+    width: 40%;
+    height: 40px;
+    margin: 15px auto;
+    border-radius: 5px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title a{
+    text-decoration: none;
+    color:#3C5A97;
+    margin-top: 15px;
+}

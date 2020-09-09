@@ -11,13 +11,12 @@ function changeBGAlbum(){
 
     document.getElementById("switch-photo").style.background = "#ffffff";
     document.getElementById("switch-photo").style.color = "#3C5A97";
-    showPhoto("album-show");
 }
 function hidePhoto(id_block){
     document.getElementById(id_block).style.height = "0";
     document.getElementById(id_block).style.width = "0";
     document.getElementById(id_block).style.display = "none";
-} 
+}
 function showPhoto(id_block){
     document.getElementById(id_block).style.height = "100%";
     document.getElementById(id_block).style.width = "100%";

@@ -7,6 +7,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <script type="text/javascript" src="./js/main.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
     <div id="header">
@@ -40,10 +43,10 @@
             </script>
             <div class="block">
                 <!-- block 1 -->
-                <div>
+                <div id="photo"  class="d-none">
                     <div>
                         <div class="thumbnail">
-                            <img src="./img/cat.jpg" alt="erro" onclick="showPhoto('photo-show')">
+                            <img src="./img/1.jpg" alt="erro" onclick="showPhoto('photo-show')">
                         </div>
                         <div class="block-info">
                             <div class="block-info-user">
@@ -99,12 +102,20 @@
                             </div>
                         </div>
                     </div>
-                </div>                
-                <!-- block 1 -->
-                <div>
+                </div>   
+
+                <div id="album">
                     <div>
-                        <div class="thumbnail">
-                            <img src="./img/cat.jpg" alt="erro" onclick="showPhoto('photo-show')">
+                        <div class="thumbnail position-relative">
+                            <div class="position-absolute">
+                                <img class="h-270 object-fit-cover rotate-10" src="./img/1.jpg" alt="erro" onclick="showPhoto('photo-show')">
+                            </div class="position-absolute">
+                            <div class="position-absolute rotate-5">
+                                <img class="h-270 object-fit-cover" src="./img/2.jpg" alt="erro" onclick="showPhoto('photo-show')">
+                            </div>
+                            <div >
+                                <img class="h-270 object-fit-cover" src="./img/3.jpg" alt="erro" onclick="showPhoto('photo-show')">
+                            </div>
                         </div>
                         <div class="block-info">
                             <div class="block-info-user">
@@ -132,8 +143,16 @@
                         </div>
                     </div>
                     <div>
-                        <div class="thumbnail">
-                            <img src="./img/cat.jpg" alt="erro" onclick="showPhoto('photo-show')">
+                        <div class="thumbnail position-relative">
+                            <div class="position-absolute ">
+                                <img class="h-270 object-fit-cover rotate-10" src="./img/1.jpg" alt="erro" onclick="showPhoto('photo-show')">
+                            </div class="position-absolute">
+                            <div class="position-absolute rotate-5">
+                                <img class="h-270 object-fit-cover" src="./img/2.jpg" alt="erro" onclick="showPhoto('photo-show')">
+                            </div>
+                            <div >
+                                <img class="h-270 object-fit-cover" src="./img/3.jpg" alt="erro" onclick="showPhoto('photo-show')">
+                            </div>
                         </div>
                         <div class="block-info">
                             <div class="block-info-user">
@@ -161,67 +180,6 @@
                         </div>
                     </div>
                 </div> 
-                <!-- block 1 -->
-                <div>
-                    <div>
-                        <div class="thumbnail">
-                            <img src="./img/cat.jpg" alt="erro" onclick="showPhoto('photo-show')">
-                        </div>
-                        <div class="block-info">
-                            <div class="block-info-user">
-                                <div><a href="#">HN</a></div>
-                                <p>Hieu Nguyen</p>
-                            </div>
-                            <div class="block-info-title">
-                                <b>Nam simply dummy text of the printing and typesettin</b>
-                                <p>is simply dummy text of the printing and typesettin
-                                    is simply dummy text of the printing and typesettin
-                                    is simply dummy text of the printing and typesettin
-                                    is simply dummy text of the printing and typesettin
-                                </p>
-                            </div>
-                            <div class="block-info-reaction" >
-                                <div>
-                                    <span class="material-icons clicked">
-                                        favorite
-                                    </span>
-                                    <p class="total-heart">123</p>
-                                </div>
-
-                                <p>4:50 pm 01/04/2018</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="thumbnail">
-                            <img src="./img/cat.jpg" alt="erro" onclick="showPhoto('photo-show')">
-                        </div>
-                        <div class="block-info">
-                            <div class="block-info-user">
-                                <div><a href="#">HN</a></div>
-                                <p>Hieu Nguyen</p>
-                            </div>
-                            <div class="block-info-title">
-                                <b>Nam simply dummy text of the printing and typesettin</b>
-                                <p>is simply dummy text of the printing and typesettin
-                                    is simply dummy text of the printing and typesettin
-                                    is simply dummy text of the printing and typesettin
-                                    is simply dummy text of the printing and typesettin
-                                </p>
-                            </div>
-                            <div class="block-info-reaction" >
-                                <div>
-                                    <span class="material-icons">
-                                        favorite
-                                    </span>
-                                    <p class="total-heart">123</p>
-                                </div>
-
-                                <p>4:50 pm 01/04/2018</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
               
                 <!-- end block -->
             </div>
@@ -278,5 +236,9 @@
             </p>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-#header #end #icon-user{
+/* #header #end #icon-user{
     display: flex;
 }
 #header #end #icon-user div{
@@ -22,7 +22,7 @@
     align-self: center;
     color:#ffffff;
     font-weight: bold;
-}
+} */
 
 #feeds-content{
     display: flex;
@@ -204,4 +204,56 @@
 }
 #slide #navigate_next{
    left: 71%;
+}
+
+/* custom */
+.bg-main{
+    background: #3C5A97;
+}
+.text-main{
+    color: #3C5A97 !important;
+}
+.swap-icon-user {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+/* .icon-user{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+} */
+.rotate-5{
+    transform: rotate(5deg);
+}
+.rotate-10{
+    transform: rotate(10deg);
+}
+
+.h-260{
+    height: 260px;
+}
+.w-50{
+    width: 50%;
+}
+.object-fit-cover{
+    object-fit: cover;
+}
+.line-height-40{
+    line-height: 40px;
+}
+@media(min-width: 376px){
+    .w-self-50{
+        width: 100%;
+    }
+}
+@media(min-width: 767px) { 
+    .w-self-50{
+        width: 50%;
+    }
+ }
+ @media(min-width: 992px) { 
+    .w-self-50{
+        width: 50%;
+    }
 }

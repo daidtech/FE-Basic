@@ -2,14 +2,17 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="./css/signup_login.css">
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/signup_login.css">
+
 </head>
 <body>
-    <div id="header">
+	 <div class="mb-5 d-md-flex d-none " id="header">
 		<div id="start">
 			<a href="#">Fotobook</a>
 			<input type="text" name="search" placeholder="Search Photo/Album">
@@ -18,47 +21,64 @@
 			<a href="#">Login</a>
 		</div>
     </div>
-    <div id="login-content">
-		<div id="title">
-			<h1>Fotobook Login</h1>
-		</div>
-		<div id="social-media">
-			<div><a href="#"><img src="./img/google.jpg" alt=""></a></div>
-			<div><a href="#"><img src="./img/google.jpg" alt=""></a></div>
-			<div><a href="#"><img src="./img/google.jpg" alt=""></a></div>
-        </div>
-        <form id="login-from-data" action="./feeds.html">
-            <div>
-                <img src="./img/user.svg" alt="error">
+    <div id="login-content" class="container">
+    	<div class="row">
+    		<div id="title" class="col-md-12 my-3">
+				<h2 class="text-center text-main font-weight-bold">Fotobook Login</h2>
 			</div>
-			<div>
-				<input type="text" placeholder="Email" autofocus id="email" name="email">
+			<div class="col-md-12 mb-3">
+				<div class="w-self-25 d-flex justify-content-around mx-auto border rounded" >
+					<div class="login-social-icon"><a href="#"><img src="./img/google.jpg" alt=""></a></div>
+					<div class="login-social-icon"><a href="#"><img src="./img/fb.png" alt=""></a></div>
+					<div class="login-social-icon"><a href="#"><img src="./img/twitter.png" alt=""></a></div>
+				</div>
 			</div>
-			<div>
-				<input type="text" placeholder="Password" id="password"	name="password">
+			<div class="col-md-12">
+				<div class="w-self-25  mx-auto bg-f8f8f8 rounded pb-3">
+					<form id="login-from-data" action="./feeds.html">
+			            <div class="text-center">
+			                <img class="my-4" id="login-user-icon" src="./img/user.svg" alt="error">
+						</div>
+
+					 	<div class="form-group  mb-0 px-3">
+						    <input type="text" class="form-control border-bottom-0" autofocus id="email" name="email" placeholder="Email">
+					  	</div>
+					  	<div class="form-group px-3">
+						    <input type="text" class="form-control" id="password"	name="password" placeholder="Password">
+					  	</div>
+
+						<div class="text-center mb-3">
+							<input class="btn bg-main text-white px-4" type="submit" value="Login"/>
+			            </div>
+
+			            <div class="title text-center">
+			                <a href="#">Forgot password?</a>
+			            </div>
+			        </form>
+			    </div>
 			</div>
-			<div>
-				<button>Login</button>
-            </div>
-            <div class="title">
-                <a href="#">Forgot password?</a>
-            </div>
-        </form>
-        <div  class="title">
+    	</div>
+
+        <div  class="title text-center mt-3">
             <a href="#">Create an account</a>
         </div>
-        <script type="text/javascript">
-			$("#login-from-data").validate({
-				  rules: {
-				    email: {
-				      required: true,
-				    },
-				    password: {
-				      required: true,
-				    }
-				  }
-				});
-		</script>
+
     </div>
+
+	<script type="text/javascript">
+		$("#login-from-data").validate({
+			  rules: {
+			    email: {
+			      required: true,
+			    },
+			    password: {
+			      required: true,
+			    }
+			  }
+			});
+	</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

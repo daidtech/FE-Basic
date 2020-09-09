@@ -92,76 +92,34 @@ label.error{
 }
 
 /* Login page */
-#login-content{
-    width: 28%;
-    margin: 70px auto;
+.login-social-icon img{
+    height: 60px;
+    display: inline;
 }
-#login-content #title h1{
+#login-user-icon{
+    height: 90px;
+}
+.bg-f8f8f8{
+    background: #f8f8f8;
+}
+.bg-main{
+    background: #3C5A97 !important;
+}
+.text-main{
     color: #3C5A97;
-    text-align: center;
 }
-#login-content #social-media{
-    margin: 30px auto;
-    margin-bottom: 15px;
-    padding: 0 5%;
-    width: 60%;
-    border:2px solid #f8f8f8;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
+@media(min-width: 376px){
+    .w-self-25{
+        width: 100%;
+    }
 }
-#login-content #social-media div > a > img{
-    width: 70px;
-}
-#login-content #login-from-data{
-    width: 60%;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    padding: 20px;
-    padding-bottom: 15px;
-    border-radius: 10px;
-}
-#login-content #login-from-data > div:first-child{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-#login-content #login-from-data > div > img{
-    display: block;
-    width: 80px;
-}
-#login-content #login-from-data > div:nth-child(2) > input{
-    width: 90%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border: 2px solid #f0f0f0;
-    padding: 10px;
-}
-#login-content #login-from-data > div:nth-child(3) > input{
-    width: 90%;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border: 2px solid #f0f0f0;
-    border-top: 0;
-    padding: 10px;
-}
-#login-content #login-from-data > div > button{
-    display: block;
-    font-weight: bold;
-    color: #ffffff;
-    margin-top: 10px;
-    background-color: #3C5A97;
-    width: 40%;
-    height: 40px;
-    margin: 15px auto;
-    border-radius: 5px;
-}
-.title{
-    display: flex;
-    justify-content: center;
-}
-.title a{
-    text-decoration: none;
-    color:#3C5A97;
-    margin-top: 15px;
+@media(min-width: 767px) { 
+    .w-self-25{
+        width: 50%;
+    }
+ }
+ @media(min-width: 992px) { 
+    .w-self-25{
+        width: 25%;
+    }
 }

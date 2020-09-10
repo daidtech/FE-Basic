@@ -212,6 +212,8 @@
 .line-height-40{
     line-height: 40px;
 }
+
+
 @media(min-width: 376px){
     .w-self-50{
         width: 100%;

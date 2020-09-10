@@ -3,73 +3,104 @@
 <head>
 	<title>Signup</title>
 	<link rel="stylesheet" href="./css/signup_login.css">
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	 <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 </head>
 <body>
-	<div id="header">
-		<div id="start">
-			<a href="#">Fotobook</a>
-			<input type="text" name="search" placeholder="Search Photo/Album">
-		</div>
-		<div id="end">
-			<a href="./login.html">Login</a>
-		</div>
-	</div>
-	<div id="content">
-		<div id="title">
-			<h1>Fotobook Signup</h1>
-		</div>
-		<div id="social-media">
-			<div><a href="#"><img src="./img/google.jpg" alt=""></a></div>
-			<div><a href="#"><img src="./img/fb.png" alt=""></a></div>
-			<div><a href="#"><img src="./img/twitter.png" alt=""></a></div>
-		</div>
-		<form id="from-data" action="#">
-			<div>
-				<h4>First name</h4>
-				<input type="text" placeholder="First Name" autofocus  id="firstname" name="firstname">
+	<div class="bg-main px-2 px-md-5">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand text-light" href="#">Fotobook</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <div class="">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search Photo/Album" aria-label="Search">
+                    </form>
+                </div>
+
+                <div>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white font-weight-bold" href="#">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+     <div id="sigup-content" class="container">
+    	<div class="row">
+    		<div id="title" class="col-md-12 my-3">
+				<h2 class="text-center text-main font-weight-bold">Fotobook Signup</h2>
 			</div>
-			<div>
-				<h4>Last name</h4>
-				<input type="text" placeholder="Last name"  id="lastname" name="lastname">
+			<div class="col-md-12 mb-3">
+				<div class="w-self-25 d-flex justify-content-around mx-auto border rounded" >
+					<div class="login-social-icon"><a href="#"><img src="./img/google.jpg" alt=""></a></div>
+					<div class="login-social-icon"><a href="#"><img src="./img/fb.png" alt=""></a></div>
+					<div class="login-social-icon"><a href="#"><img src="./img/twitter.png" alt=""></a></div>
+				</div>
 			</div>
-			<div>
-				<h4>New password</h4>
-				<input type="text" placeholder="password" id="password" name="password">
+			<div class="col-md-12" id="swap-login-from-data">
+				<div  class="w-self-25 mx-auto bg-f8f8f8 pb-3">
+					<form id="login-from-data" action="./feeds.html">
+					 	<div class="form-group  mb-0 px-3">
+				 		    <label for="firstname">First name</label>
+						    <input type="text" class="form-control border-bottom-0" autofocus id="firstname" name="firstname" placeholder="First name">
+					  	</div>
+					  	<div class="form-group px-3">
+				 		    <label for="lastname">Last name</label>
+						    <input type="text" class="form-control" id="lastname"	name="lastname" placeholder="Last name">
+					  	</div>
+					  	<div class="form-group px-3">
+				 		    <label for="password">New password</label>
+						    <input type="text" class="form-control" id="password"	name="password" placeholder="Password">
+					  	</div>					  	
+					  	<div class="form-group px-3">
+				 		    <label for="confirmation">Example label</label>
+						    <input type="text" class="form-control" id="confirmation" name="confirmation" placeholder="Password">
+					  	</div>
+
+						<div class="text-center mb-3">
+							<input class="btn bg-main text-white px-4" type="submit" value="Login"/>
+			            </div>
+			        </form>
+			    </div>
 			</div>
-			<div>
-				<h4>Password confirmation</h4>
-				<input type="text" placeholder="confirmation"  id="confirmation" name="confirmation">
-			</div>
-			<div>
-				<button type="submit">Signup</button>
-			</div>
-			<script type="text/javascript">
-				$("#from-data").validate({
-					  rules: {
-					    firstname: {
-					      required: true,
-					      maxlength: 25
-					    },
-					    lastname: {
-					      required: true,
-					      maxlength: 25
-					    },					    
-					    password: {
-					      required: true,
-					      maxlength: 64
-					    }, 
-					    confirmation: {
-					      required: true,
-					      maxlength: 25
-					    },
-					  }
-					});
-			</script>
-		</form>
-	</div> 
+    	</div>
+    </div>
+	<script type="text/javascript">
+		$("#from-data").validate({
+			  rules: {
+			    firstname: {
+			      required: true,
+			      maxlength: 25
+			    },
+			    lastname: {
+			      required: true,
+			      maxlength: 25
+			    },					    
+			    password: {
+			      required: true,
+			      maxlength: 64
+			    }, 
+			    confirmation: {
+			      required: true,
+			      maxlength: 25
+			    },
+			  }
+			});
+	</script>
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

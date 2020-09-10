@@ -76,21 +76,6 @@ label.error{
 .text-main{
     color: #3C5A97;
 }
-@media(min-width: 376px){
-    .w-self-25{
-        width: 100%;
-    }
-}
-@media(min-width: 767px) { 
-    .w-self-25{
-        width: 50%;
-    }
- }
- @media(min-width: 992px) { 
-    .w-self-25{
-        width: 25%;
-    }
-}
 
 
 /* custom */
@@ -124,17 +109,34 @@ label.error{
 .line-height-40{
     line-height: 40px;
 }
+
+/*sigup css */
+#sigup-content #swap-login-from-data > div{
+    padding: 18px;
+    border-radius: 9px;
+}
+
 @media(min-width: 376px){
+    .w-self-25{
+        width: 100%;
+    }
     .w-self-50{
         width: 100%;
     }
 }
 @media(min-width: 767px) {
+    .w-self-25{
+        width: 50%;
+    }
     .w-self-50{
         width: 50%;
     }
  }
  @media(min-width: 992px) {
+    #sigup-content #swap-login-from-data .w-self-25{
+        width: 33%;
+    }
+
     .w-self-50{
         width: 50%;
     }
@@ -143,5 +145,8 @@ label.error{
     }
     .w-self-40{
         width: 40%;
+    }
+    .w-self-25{
+        width: 25%;
     }
 }

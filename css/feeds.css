@@ -1,28 +1,3 @@
-#header #end #icon-user{
-    display: flex;
-}
-#header #end #icon-user div{
-    margin: auto 0;
-    background-color: #ffffff;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    margin-right: 6px;
-}
-#header #end #icon-user{
-    margin-right: 50px;
-}
-#header #end #icon-user div a{
-    line-height: 35px;
-    color: #3C5A97;
-    background-color: unset;
-}
-#header #end #icon-user > p{
-    align-self: center;
-    color:#ffffff;
-    font-weight: bold;
-}
 
 #feeds-content{
     display: flex;
@@ -152,29 +127,29 @@
     align-self: center;
 }
 
-.fixed-show{
+/* .fixed-show{
     position: fixed;
     top: 0;
     background-color: rgba(255,200,200,0.5);
     height: 0;
     width: 0;
     display: none;
-}
-.fixed-show > div{
+} */
+/* .fixed-show > div{
    height: 70%;
    width: 50%;
    margin: 8% 24%;
    background: #ffffff;
    padding: 20px;
    border-radius: 5px;
-}
-.fixed-show > div > div{
+} */
+/* .fixed-show > div > div{
     display: flex;
     justify-content: space-between;
 }
 .fixed-show > div > div > a> span{
     color: black;
-}
+} */
 .img-style-fixed{
   object-fit: cover;
   height: 520px;
@@ -205,19 +180,61 @@
 #slide #navigate_next{
    left: 71%;
 }
-/*like css*/
-.h-270{
-    height: 270px;
-    width: 400px;
+
+/* custom */
+.bg-main{
+    background: #3C5A97;
+}
+.text-main{
+    color: #3C5A97 !important;
+}
+.swap-icon-user {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+/* .icon-user{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+} */
+.rotate-5{
+    transform: rotate(5deg);
+}
+.rotate-10{
+    transform: rotate(10deg);
+}
+
+.h-260{
+    height: 260px;
+}
+.w-50{
+    width: 50%;
 }
 .object-fit-cover{
     object-fit: cover;
 }
-.rotate-5{
-    -ms-transform: rotate(5deg); /* IE 9 */
-    transform: rotate(5deg);
+.line-height-40{
+    line-height: 40px;
 }
-.rotate-10{
-    -ms-transform: rotate(10deg); /* IE 9 */
-    transform: rotate(10deg);
+@media(min-width: 376px){
+    .w-self-50{
+        width: 100%;
+    }
+}
+@media(min-width: 767px) {
+    .w-self-50{
+        width: 50%;
+    }
+ }
+ @media(min-width: 992px) {
+    .w-self-50{
+        width: 50%;
+    }
+    .w-self-60{
+        width: 60%;
+    }
+    .w-self-40{
+        width: 40%;
+    }
 }

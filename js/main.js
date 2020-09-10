@@ -38,3 +38,4 @@ function nextImage(_id){
     }
     document.getElementById("slide-image").src = "./img/"+id+".jpg";
 }
+

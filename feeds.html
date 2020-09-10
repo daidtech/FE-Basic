@@ -7,6 +7,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <script type="text/javascript" src="./js/main.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
@@ -58,21 +63,18 @@
                 <button id="switch-photo" onclick="changeBGPhoto()">PHOTO</button>
                 <button id="switch-album" onclick="changeBGAlbum()">ALBUM</button>
             </div>
-            <script type="text/javascript">
-
-            </script>
             <!-- start block show photo-->
             <div id="photo">
                 <!-- start block show photo-->
-                <div class="container mt-3 d-none">
+                <div class="container mt-3">
                     <div class="row">
                         <!-- block 1 -->
                         <div class="col-12 col-md-6">
                             <div class="d-flex justify-content-between">
-                                <div class="w-self-50">
+                                <div class="w-self-50 photo-block-img" data-target="#show-photo"  data-toggle="modal">
                                     <div class="position-relative w-100">
                                         <div class="position-absolute">
-                                            <img src="./img/1.jpg" alt="" class="h-260 w-100 object-fit-cover rounded"  onclick="showPhoto('photo-show')">
+                                            <img src="./img/1.jpg" alt="" class="h-260 w-100 object-fit-cover rounded">
                                         </div>
                                     </div>
                                 </div>
@@ -95,7 +97,6 @@
                                                 </span>
                                                 <p class="total-heart">123</p>
                                             </div>
-            
                                             <p>4:50 pm 01/04/2018</p>
                                         </div>
                                     </div>
@@ -104,7 +105,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="d-flex justify-content-between">
-                                <div class="w-self-50">
+                                <div class="w-self-50" data-target="#show-album"  data-toggle="modal">
                                     <div class="position-relative w-100">
                                         <div class="position-absolute">
                                             <img src="./img/1.jpg" alt="" class="h-260 w-100 object-fit-cover rounded"  onclick="showPhoto('photo-show')">
@@ -270,27 +271,29 @@
 
         </div>
         <div id="right">
-
         </div>
     </div>
-    <div id="photo-show" class="fixed-show">
-        <div>
-            <div>
-                <h3>Nam simply dummy text of the printing and typesettin</h3> 
-                <a href="#" onclick="hidePhoto('photo-show')"><span class="material-icons">
-                    close
-                    </span>
-                </a>
+    <div id="photo-show">
+        <div class="modal fade" id="show-photo" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">x</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <img class="d-block w-100" src="./img/1.jpg" data-src="holder.js/900x400?theme=social" alt="First slide">
+                </div>
+                <div class="modal-footer">
+                    <p>The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate,...</p>
+                </div>
+              </div>
             </div>
-            <img class="img-style-fixed" src="./img/cat.jpg">
-            <p>Aliquam simply dummy text of the printing and typesettin
-                is simply dummy text of the printing and typesettin
-                is simply dummy text of the printing and typesettin
-                is simply dummy text of the printing and typesettin
-            </p>
         </div>
     </div>
-    <div id="album-show" class="fixed-show">
+    <div id="album-show" class="d-none">
         <div>
             <div>
                 <h3>Nam simply dummy text of the printing and typesettin</h3> 
@@ -322,7 +325,19 @@
         </div>
     </div>
 
+    <script>
+        $("#album").hide();
+        // show hide album/photo
+        $("#switch-photo").bind("click", function(){
+            $("#photo").show();
+            $("#album").hide();
+        })
+        $("#switch-album").bind("click", function(){
+            $("#photo").hide();
+            $("#album").show();
+        })
 
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

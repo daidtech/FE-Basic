@@ -2,24 +2,48 @@
 <html>
 <head>
     <title>Login</title>
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/signup_login.css">
 
 </head>
 <body>
-	 <div class="mb-5 d-md-flex d-none " id="header">
-		<div id="start">
-			<a href="#">Fotobook</a>
-			<input type="text" name="search" placeholder="Search Photo/Album">
-		</div>
-		<div id="end">
-			<a href="#">Login</a>
-		</div>
+	 <div class="bg-main px-5">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand text-light" href="#">Fotobook</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <div class="">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search Photo/Album" aria-label="Search">
+                    </form>
+                </div>
+
+                <div>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <div class="form-row mx-0">
+                                <div class="swap-icon-user bg-white">
+                                    <a class="nav-link icon-user text-main" href="#">HN</a>
+                                </div>
+                                <a class="nav-link text-light" href="#">Hieu Nguyen</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white font-weight-bold" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
     <div id="login-content" class="container">
     	<div class="row">
